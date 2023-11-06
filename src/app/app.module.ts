@@ -13,6 +13,7 @@ import { SignupComponent } from './auth-components/signup/signup.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzFormModule } from 'ng-zorro-antd/form';
+// import {DemoNgZorroAntModule} from 'src/app/DemoNgZorroAntModule';
 import { LoginComponent } from './auth-components/login/login.component';
 
 registerLocaleData(en);
@@ -33,6 +34,7 @@ registerLocaleData(en);
     NzButtonModule,
     NzSpinModule,
     NzFormModule,
+    // DemoNgZorroAntModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

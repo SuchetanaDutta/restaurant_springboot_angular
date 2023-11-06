@@ -21,15 +21,15 @@ export class AdminService {
         )
     }
 
-    getAllCategories():Observable<any>{
-        return this.http.post<[]>(BASIC_URL + "api/admin/category", 
+    getAllCategories(): Observable<any>{
+        return this.http.post<[]>(BASIC_URL + "api/admin/categories", 
         {
-            headers:this.createAuthorizationHeader()
+            headers: this.createAuthorizationHeader()
         }
         )
     }
 
-    getAllCategoriesByTitle(title:string):Observable<any>{
+    getAllCategoriesByTitle(title:string): Observable<any>{
         return this.http.post<[]>(BASIC_URL + 'api/admin/category/${title}', 
         {
             headers:this.createAuthorizationHeader()
