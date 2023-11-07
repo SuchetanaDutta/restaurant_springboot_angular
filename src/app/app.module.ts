@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignupComponent } from './auth-components/signup/signup.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { NzSpinComponent, NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzFormModule } from 'ng-zorro-antd/form';
 // import {DemoNgZorroAntModule} from 'src/app/DemoNgZorroAntModule';
 import { LoginComponent } from './auth-components/login/login.component';
@@ -22,7 +22,7 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

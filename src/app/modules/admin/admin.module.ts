@@ -16,13 +16,14 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { PostProductComponent } from './admin-components/post-product/post-product.component';
-
+import { ViewProductsComponent } from './admin-components/view-products/view-products.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     addCategoryComponent,
-    PostProductComponent
+    PostProductComponent,
+    ViewProductsComponent,
   ],
   imports: [
     BrowserModule,
