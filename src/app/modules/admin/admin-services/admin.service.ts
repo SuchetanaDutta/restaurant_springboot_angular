@@ -45,7 +45,28 @@ export class AdminService {
     }
 
     getProductsByCategory(categoryId: number): Observable<any> {
-        return this.http.post<[]>(BASIC_URL + `api/admin/${categoryId}/products`,
+        return this.http.get<[]>(BASIC_URL + `api/admin/${categoryId}/products`,
+        {
+            headers: this.createAuthorizationHeader()
+        })
+    }
+
+    getProductsByCategoryAndTitle(categoryId: number, title: string): Observable<any> {
+        return this.http.get<[]>(BASIC_URL + `api/admin/${categoryId}/product/${title}`,
+        {
+            headers: this.createAuthorizationHeader()
+        })
+    }
+
+    deleteProduct(productId: number): Observable<any> {
+        return this.http.delete<[]>(BASIC_URL + `api/admin/product/${productId}`,
+        {
+            headers: this.createAuthorizationHeader()
+        })
+    }
+
+    getProductById(productId: number): Observable<any> {
+        return this.http.get<[]>(BASIC_URL + `api/admin/product/${productId}`,
         {
             headers: this.createAuthorizationHeader()
         })

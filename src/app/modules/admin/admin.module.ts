@@ -17,6 +17,7 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { PostProductComponent } from './admin-components/post-product/post-product.component';
 import { ViewProductsComponent } from './admin-components/view-products/view-products.component';
+import { UpdateProductComponent } from './admin-components/update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ViewProductsComponent } from './admin-components/view-products/view-pro
     addCategoryComponent,
     PostProductComponent,
     ViewProductsComponent,
+    UpdateProductComponent,
   ],
   imports: [
     BrowserModule,

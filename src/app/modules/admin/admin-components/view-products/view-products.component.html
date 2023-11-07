@@ -4,8 +4,6 @@
         [disabled]="validateForm.invalid">Search</button>
 </form> -->
 
-
-
 <div style="background-color: #F8F8F8; min-height: 91vh;">
 
     <div style="padding-top: 10px;"></div>
@@ -24,12 +22,12 @@
                     - Category: <b>{{product.categoryName}}</b>
                 </h5>
                 <hr>
-                <!-- <div style="float: right;">
-                    <button nzSize="small" nz-button nzType="primary" 
+                <div style="float: right;">
+                    <!-- <button nzSize="small" nz-button nzType="primary" 
                         routerLink="/admin/edit_product/{{product.id}}">Update</button>
-                        
+                         -->
                     <button style="margin-left: 10px;" nzSize="small" nz-button nzType="primary" 
-                        (click)="deleteProduct(product.id)" nzDanger>Delete</button> -->
+                        (click)="deleteProduct(product.id)" nzDanger>Delete</button>
                 </div> 
             </div>
 
