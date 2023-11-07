@@ -18,6 +18,7 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { PostProductComponent } from './admin-components/post-product/post-product.component';
 import { ViewProductsComponent } from './admin-components/view-products/view-products.component';
 import { UpdateProductComponent } from './admin-components/update-product/update-product.component';
+import { DemoNgZorroAntdModule } from 'src/app/DemoNgZorroAntdModule';
 
 @NgModule({
   declarations: [
@@ -39,8 +40,10 @@ import { UpdateProductComponent } from './admin-components/update-product/update
     NzMenuModule,
     NzBreadCrumbModule,
     NzDropDownModule, 
+    NzButtonModule,
     NzDividerModule,
-    NzGridModule
+    NzGridModule,
+    DemoNgZorroAntdModule
   ]
 })
 export class AdminModule { }
