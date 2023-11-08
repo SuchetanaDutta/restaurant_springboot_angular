@@ -21,7 +21,15 @@ export class CustomerService {
 }
 
 getAllCategoriesByName(title: String): Observable<any>{
-  return this.http.post<[]>(BASIC_URL + `api/customer/categories/${title}`, 
+  return this.http.get<[]>(BASIC_URL + `api/customer/categories/${title}`, 
+  {
+      headers: this.createAuthorizationHeader()
+  }
+  )
+}
+
+getProductsByCategory(categoryId: number): Observable<any>{
+  return this.http.get<[]>(BASIC_URL + `api/customer/${categoryId}/products`, 
   {
       headers: this.createAuthorizationHeader()
   }

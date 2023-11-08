@@ -1,0 +1,21 @@
+<div style="background-color: #F8F8F8; min-height: 91vh;">
+    <div style="padding-top: 10px;"></div>
+    <div style="margin-top: 10px; " class="child" *ngFor="let product of Products">
+<div nz-row>
+    <div nz-col nzSpan="8">
+        <img class="profile" style="height: 130px; width: 200px; border-radius: 10px;" alt="profile"
+        [src]="product.processedImg" />
+    </div>
+            <div nz-col nzSpan="16">
+                <h2 style="cursor: pointer; color: #108ee9;">
+                    {{product.product}}</h2>
+                <hr>
+                <h5>Price: <b>{{product.price}}</b>
+                    - Description: <b>{{product.description}}</b>
+                    - Category: <b>{{product.categoryName}}</b>
+                </h5>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
