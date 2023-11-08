@@ -20,6 +20,14 @@ export class CustomerService {
     )
 }
 
+getAllCategoriesByName(title: String): Observable<any>{
+  return this.http.post<[]>(BASIC_URL + `api/customer/categories/${title}`, 
+  {
+      headers: this.createAuthorizationHeader()
+  }
+  )
+}
+
   createAuthorizationHeader(): HttpHeaders{
     let authHeaders: HttpHeaders = new HttpHeaders();
     return authHeaders.set(
