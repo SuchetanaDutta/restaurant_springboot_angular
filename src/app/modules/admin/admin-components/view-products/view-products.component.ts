@@ -15,7 +15,7 @@ export class ViewProductsComponent {
     categoryId: any = this.activatedroute.snapshot.params['categoryId'];
     Products: any = [];
     isSpinning: boolean;
-    validateFrom:FormGroup;
+    validateForm: FormGroup;
     size: NzButtonSize = 'large';
 
     constructor(private adminService: AdminService,
@@ -24,16 +24,16 @@ export class ViewProductsComponent {
         private message: NzMessageService) { }
 
     ngonInit(): void {
-        this.validateFrom = this.fb.group({
+        this.validateForm = this.fb.group({
             title: [null, [Validators.required]],
         });
         this.getProductsByCategory(); 
     }
 
-    submitFrom() {
+    submitForm() {
         this.isSpinning = true;
         this.Products = [];
-        this.adminService.getProductsByCategoryAndTitle(this.categoryId, this.validateFrom.get(['title'])!.value).subscribe((res) => {
+        this.adminService.getProductsByCategoryAndTitle(this.categoryId, this.validateForm.get(['title'])!.value).subscribe((res) => {
             console.log(res);
             res.foreach(element => {
                 element.processedImg = 'data:image/jpeg;base64,' + element.returnedImg;

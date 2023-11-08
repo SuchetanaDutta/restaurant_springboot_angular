@@ -36,6 +36,14 @@ getProductsByCategory(categoryId: number): Observable<any>{
   )
 }
 
+getProductsByCategoryAndTitle(categoryId: number,title: string): Observable<any>{
+  return this.http.get<[]>(BASIC_URL + `api/customer/${categoryId}/product/${title}`, 
+  {
+      headers: this.createAuthorizationHeader()
+  }
+  )
+}
+
   createAuthorizationHeader(): HttpHeaders{
     let authHeaders: HttpHeaders = new HttpHeaders();
     return authHeaders.set(
