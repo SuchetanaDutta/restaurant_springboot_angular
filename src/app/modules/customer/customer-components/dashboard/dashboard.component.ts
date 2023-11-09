@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NzButtonModule, NzButtonSize } from 'ng-zorro-antd/button';
-import { AdminService } from 'src/app/modules/admin/admin-services/admin.service';
 import { CustomerService } from '../../customer-service/customer.service';
 
 @Component({
