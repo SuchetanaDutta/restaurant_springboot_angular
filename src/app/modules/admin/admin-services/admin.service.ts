@@ -72,6 +72,13 @@ export class AdminService {
         })
     }
 
+    updateProduct(productId: number, productDto: any): Observable<any> {
+        return this.http.put<[]>(BASIC_URL + `api/admin/product/${productId}`, productDto,
+        {
+            headers: this.createAuthorizationHeader()
+        })
+    }
+
     createAuthorizationHeader(): HttpHeaders{
         let authHeaders: HttpHeaders = new HttpHeaders();
         return authHeaders.set(

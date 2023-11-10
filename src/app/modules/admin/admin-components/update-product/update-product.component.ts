@@ -42,18 +42,46 @@ export class UpdateProductComponent {
       this.validateForm.patchValue(productDto);
     })
   }
+  
+  updateProduct(): void {
+    this.isSpinning = true;
+    const formData: FormData = new FormData();
+    if (this.imgChanged && this.selectedFile) {
+      formData.append('img', this.selectedFile);
+    }
+    formData.append('name', this.validateForm.get('name') . value);
+    formData.append('price', this.validateForm.get('price').value);
+    formData.append('description', this.validateForm.get('description').value);
+    console.log(formData);
+    this.adminService.updateProduct(this.productId, formData). subscribe((res) => {
+      this.isSpinning = false;
+      if (res.id != null) {
+        this.message
+          .success(
+            `Product updated Successfully.`,
+            { nzDuration: 5000 }
+          );
+        this.router.navigateByUrl('/admin/dashboard');
+      } else {
+        this.message
+          .error(
+            "Something went wrong",
+            { nzDuration: 5000 }
+          )}
+      });
+  }
 
     onFileSelected(event: any) {
-      this. selectedFile = event. target.files[0];
+      this.selectedFile = event. target.files[0];
       this.previewImage();
-      this. imgChanged = true;
+      this.imgChanged = true;
       this.existingImage = null;
     }
 
     previewImage() {
       const reader = new FileReader();
       reader.onload = () => {
-      this.imagePreview = reader.result;
+        this.imagePreview = reader.result;
       };
       reader.readAsDataURL(this.selectedFile);
   }
