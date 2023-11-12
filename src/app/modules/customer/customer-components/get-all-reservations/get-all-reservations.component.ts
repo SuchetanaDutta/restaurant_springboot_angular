@@ -7,6 +7,7 @@ import { CustomerService } from '../../customer-service/customer.service';
   styleUrls: ['./get-all-reservations.component.scss']
 })
 export class GetAllReservationsComponent {
+  
     isSpinning: boolean = false;
     reservations: any;
 

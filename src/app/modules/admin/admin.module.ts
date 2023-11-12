@@ -19,6 +19,7 @@ import { PostProductComponent } from './admin-components/post-product/post-produ
 import { ViewProductsComponent } from './admin-components/view-products/view-products.component';
 import { UpdateProductComponent } from './admin-components/update-product/update-product.component';
 import { DemoNgZorroAntdModule } from 'src/app/DemoNgZorroAntdModule';
+import { GetReservationsComponent } from './admin-components/get-reservations/get-reservations.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DemoNgZorroAntdModule } from 'src/app/DemoNgZorroAntdModule';
     PostProductComponent,
     ViewProductsComponent,
     UpdateProductComponent,
+    GetReservationsComponent,
   ],
   imports: [
     BrowserModule,
