@@ -13,7 +13,7 @@ export class GetReservationsComponent {
   reservations: any;
 
   constructor(private service: AdminService,
-    private message:NzMessageService) { }
+    private message:NzMessageService) { } 
 
   ngOnInit() {
     this. getReservationsByUser();
